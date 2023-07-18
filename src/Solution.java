@@ -1,28 +1,22 @@
-import java.util.Scanner;
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+
 
 public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-    public static void main(String[] args) {
-            Scanner sc=new Scanner(System.in);
-            System.out.println("================================");
-            for(int i=0;i<3;i++){
-                String s1=sc.next();
-                int x=sc.nextInt();
-                //Complete this line
-                System.out.print(s1);
-                for (int j=0; j<(15-s1.length());j++) {
-                   System.out.print(" "); 
-                }
-                for (int k=0; k<(3 -  String.valueOf(x).length());k++) {
-                   System.out.print("0"); 
-                }
-                System.out.println(x);
-            }
-            sc.close();
-            System.out.println("================================");
+        int N = Integer.parseInt(bufferedReader.readLine().trim());
 
+        bufferedReader.close();
+        for (int i = 1; i<11; i++) {
+            System.out.println(N + " x " + i + " = " + N*i);
+        }
     }
 }
-
-
-
